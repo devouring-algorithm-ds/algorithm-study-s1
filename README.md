@@ -8,11 +8,11 @@
 
 ## 파일 구조
 - 알고리즘/자료구조 구현: `이름/week#/구현/[알고리즘/자료구조 이름]/[소스코드]`
-  - ex) `imeubug/week1/implementation/singly-linked-list/main.cpp`
-  - ex) `imeubug/week1/구현/단일연결리스트/main.cpp`
+  - ex) `eubug/week1/implementation/singly-linked-list/main.cpp`
+  - ex) `eubug/week1/구현/단일연결리스트/main.cpp`
 - PS (코테): `이름/week#/problems/[boj|leetcode]/[분류]/[소스코드]`
-  - ex) `imeubug/week1/problems/boj/array/10818.cpp`
-  - ex) `imeubug/week1/problems/leetcode/linked-list/1290.cpp`
+  - ex) `eubug/week1/problems/boj/array/10818.cpp`
+  - ex) `eubug/week1/problems/leetcode/linked-list/1290.cpp`
 
 ## 커리큘럼
 - [ ] 배열 & 연결리스트
