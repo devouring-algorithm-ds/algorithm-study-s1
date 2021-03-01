@@ -1,10 +1,18 @@
 # 기초 알고리즘 & 자료구조 스터디 
 
 ## 온라인 저지
-해당 스터디에서는 아래의 사이트들을 사용합니다.
+해당 스터디에서는 아래의 사이트들을 이용합니다.
 
 - 백준 온라인 저지([https://www.acmicpc.net](https://www.acmicpc.net))
 - LeetCode ([https://leetcode.com](https://leetcode.com))
+
+## 파일 구조
+- 알고리즘/자료구조 구현: `이름/week#/구현/[알고리즘/자료구조 이름]/[소스코드]`
+  - ex) `imeubug/week1/implementation/singly-linked-list/main.cpp`
+  - ex) `imeubug/week1/구현/단일연결리스트/main.cpp`
+- PS (코테): `이름/week#/problems/[boj|leetcode]/[분류]/[소스코드]`
+  - ex) `imeubug/week1/problems/boj/array/10818.cpp`
+  - ex) `imeubug/week1/problems/leetcode/linked-list/1290.cpp`
 
 ## 커리큘럼
 - [ ] 배열 & 연결리스트
