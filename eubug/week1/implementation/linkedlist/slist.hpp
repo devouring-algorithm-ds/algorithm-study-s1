@@ -16,8 +16,10 @@ class Slist
 
     void insertFront(int val);
     void insertBack(int val);
+    void insertAt(int val, int pos);
     int removeFirst();
     int removeLast();
+    int removeAt(int pos);
 
     bool isEmpty() { return length == 0; }
     int getLength() { return length; }
@@ -84,16 +86,58 @@ void Slist::insertFront(int val)
 void Slist::insertBack(int val) 
 {
   Node *newNode = new Node(val);
-  Node *temp = head;
 
-  while(temp->next != nullptr) 
-    temp = temp->next; 
+  if(head == nullptr) 
+  {
+    head = newNode;
+  }
+  else 
+  {
+    Node *temp = head;
 
-  temp->next = newNode;
+    while(temp->next != nullptr) 
+      temp = temp->next; 
+
+    temp->next = newNode;
+  }
 
   ++length;
 }
 
+/*********************************************
+ * insert a new node at a desired index position
+ * *******************************************
+ * 1. create a new node
+ * 2. create a temp var to store the head
+ * 3. move to the node one previous the 'position'
+ * 4. insert the new node after the 'temp'
+ ********************************************/
+void Slist::insertAt(int val, int pos)
+{
+  if (pos <= 0)
+  {
+    insertFront(val);
+  }
+  else if (pos >= length)
+  {
+    insertBack(val);
+  }
+  else 
+  {
+    Node *newNode = new Node(val);
+    Node *temp = head;
+
+    for(int i=0; i<pos-1; ++i)
+    {
+      temp = temp->next;
+    }
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+    ++length;
+  }
+}
 /*********************************************
  * remove a node from the head
  * *******************************************

@@ -23,5 +23,23 @@ int main()
 
   list.print();
 
+  list.insertAt(100, 1);
+  list.print();
+
+  list.insertAt(200, 0);
+  list.print();
+
+  while(!list.isEmpty()) 
+    cout << "removeFirst: " << list.removeFirst() << endl;
+
+  list.print();
+
+  list.insertAt(1, 10);
+  list.insertAt(2, 10);
+  list.insertAt(3, 0);
+  list.insertAt(4, -1);
+
+  list.print();
+
   return 0;
 }
