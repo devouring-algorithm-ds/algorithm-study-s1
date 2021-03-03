@@ -110,7 +110,8 @@ void Slist::insertBack(int val)
  * 1. create a new node
  * 2. create a temp var to store the head
  * 3. move to the node one previous the 'position'
- * 4. insert the new node after the 'temp'
+ * 4. link new node's next
+ * 5. link temp.next with the new node 
  ********************************************/
 void Slist::insertAt(int val, int pos)
 {
@@ -194,6 +195,35 @@ int Slist::removeLast()
   }
 }
 
+/*********************************************
+ * remove a node located at the index position
+ * *******************************************
+ * 1. create a temp var to store the head
+ * 2. move to the node at positioin - 1
+ * 3. store temp.next at other temporary variable
+ * 4. let temp.next be the next next node 
+ * 5. remove a node at step 3
+ ********************************************/
+int Slist::removeAt(int pos)
+{
+  if (pos <= 0) return removeFirst();
+  if (pos >= length) return removeLast();
+
+  Node *temp = head;
+  for(int i=0; i<pos-1; ++i)
+  {
+    temp = temp->next;
+  }
+
+  int val = temp->next->data;
+  Node *deleteNode = temp->next;
+  temp->next = temp->next->next;
+  delete deleteNode;
+
+  --length;
+
+  return val;
+}
 /*********************************************
  * display all nodes
  ********************************************/
