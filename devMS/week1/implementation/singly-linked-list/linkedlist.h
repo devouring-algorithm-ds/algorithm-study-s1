@@ -8,7 +8,7 @@ public:
   Node<T>* next;
   T data;
 
-	Node(T val_in = 10000 )
+	Node(T val_in = 0 )
 	{
 		next = NULL;
 		data = val_in; 
@@ -20,7 +20,6 @@ class LinkedList
 {
 	//pointer
 	Node<T>* head;
-	Node<T>* tail;
 
 	//Node obj pointer
 	Node<T>* newNode;
@@ -37,7 +36,7 @@ public:
 	void insertLast(T val_in);
 	void removeFront();
 	void removeLast();
-  void printList();
+  	void printList();
 };
 
 template <typename T>
