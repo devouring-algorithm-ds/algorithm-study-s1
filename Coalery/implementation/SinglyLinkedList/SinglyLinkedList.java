@@ -72,4 +72,52 @@ public class SinglyLinkedList<T> {
 		length--;
 		return data;
 	}
+	
+	public void insertAt(int pos, T data) {
+		if(pos < 0 || pos >= length) return;
+		
+		if(pos == 0) {
+			insertFront(data);
+			return;
+		} else if(pos == length - 1) {
+			insertLast(data);
+			return;
+		}
+		
+		Node<T> temp = head;
+		for(int i=0; i<pos - 1; i++)
+			temp = temp.next;
+		
+		Node<T> newNode = new Node<>(data);
+		Node<T> nextNode = temp.next;
+		
+		newNode.next = nextNode;
+		temp.next = newNode;
+		
+		length++;
+	}
+	
+	public T removeAt(int pos) {
+		if(pos < 0 || pos >= length) return null;
+		
+		if(pos == 0)
+			return removeFront();
+		else if(pos == length - 1)
+			return removeLast();
+		
+		Node<T> temp = head;
+		for(int i=0; i<pos - 1; i++)
+			temp = temp.next;
+		
+		Node<T> targetNode = temp.next;
+		T data = targetNode.data;
+		
+		Node<T> nextNode = targetNode.next;
+		temp.next = nextNode;
+		
+		targetNode = null;
+		
+		length--;
+		return data;
+	}
 }
