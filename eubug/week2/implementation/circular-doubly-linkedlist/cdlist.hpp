@@ -105,7 +105,7 @@ void CDlist::insertFront(int val)
 /*********************************************
  * insert a new node at the end of the list 
  * *******************************************
- * 1. create a new node
+ * 1. create a new node:
  * 2. link tail's next with the new node
  * 3. link new node's previous with the tail
  * 4. update the tail
@@ -145,7 +145,7 @@ void CDlist::insertBack(int val)
 void CDlist::insertAt(int val, int pos)
 {
   if (pos <= 0) insertFront(val);
-  else if (pos >= length) insertBack(val);
+  else if (pos >= length-1) insertBack(val);
   else 
   {
     Node *newNode = new Node(val);
@@ -209,8 +209,12 @@ int CDlist::removeBack()
   else 
   {
     int val = tail->data;
+    cout << "val: " << val << endl;
     tail->prev->next = head;
     head->prev = tail->prev;
+    cout << "here2" << endl;
+    cout << "head: " << head->data << endl;
+    cout << "tail: " << tail->data << endl;
     delete tail;
     tail = head->prev;
     --length;
@@ -223,27 +227,28 @@ int CDlist::removeBack()
  * remove a node located at the index position
  * *******************************************
  * 1. create a temp var to store the head
- * 2. move to the node at positioin - 1
- * 3. store temp.next at other temporary variable
- * 4. let temp.next be the next next node 
- * 5. remove a node at step 3
+ * 2. move to the node to be deleted
+ * 3. re-link temp's prev and next
+ * 4. delete the current temp
  ********************************************/
 int CDlist::removeAt(int pos)
 {
+    cout << "removeAt head: " << head->data << endl;
+    cout << "removeAt tail: " << tail->data << endl;
   if (pos <= 0) return removeFront();
-  if (pos >= length) return removeBack();
-
-  Node *temp = head;
-  for(int i=0; i<pos-1; ++i)
-  {
-    temp = temp->next;
+  if (pos >= length-1) {
+    cout << "here" << endl;
+    return removeBack();
   }
 
-  int val = temp->next->data;
-  Node *deleteNode = temp->next;
-  temp->next = deleteNode->next;
-  deleteNode->next->prev = temp;
-  delete deleteNode;
+  Node *temp = head;
+  for(int i=0; i<pos; ++i) 
+    temp = temp->next;
+
+  int val = temp->data;
+  temp->prev->next = temp->next;
+  temp->next->prev = temp->prev;
+  delete temp;
 
   --length;
 
