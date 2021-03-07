@@ -15,6 +15,7 @@
 - 풀어볼 문제
   + 백준: 
     - [요세푸스 문제 (Silver V)](https://www.acmicpc.net/problem/1158)
+    - [에디터 (Silver III)](https://www.acmicpc.net/problem/1406)
   + Leetcode:
     - [연결리스트 사이클 감지하기](https://leetcode.com/problems/linked-list-cycle/)
     - [서로 다른 두 연결리스트의 교차점 찾기](https://leetcode.com/problems/intersection-of-two-linked-lists/)
