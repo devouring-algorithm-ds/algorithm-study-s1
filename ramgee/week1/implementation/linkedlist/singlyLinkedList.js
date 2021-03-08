@@ -37,7 +37,7 @@ class LinkedList {
   }
 
   removeFront() {
-    if (this.length >= 0) {
+    if (this.length > 0) {
       this.head = this.head[1];
       this.length -= 1;
     } else {
@@ -58,7 +58,7 @@ class LinkedList {
   }
 
   removeBack() {
-    if (this.length >= 0) {
+    if (this.length > 0) {
       const beforeTail = this.getNode(this.length - 1);
       beforeTail[1] = null;
       this.tail = beforeTail;
