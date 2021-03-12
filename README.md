@@ -17,59 +17,51 @@
     boj | leetcode 대신 해당 사이트의 이름을 사용해주세요.*
 
 ## 커리큘럼
-- Week1: 배열 & 연결리스트
+- Week 1: Array & Singly Linked List
 	- [x] 데이터 접근, 삽입, 삭제 시간복잡도 비교 
 	- [x] 단일 연결리스트 구현
   - [x] 문제풀이
-- Week2: 이중 & 원형 연결리스트
-	- [ ] 차이점 비교
-  - [ ] 구현
-  - [ ] 문제풀이
-- [ ] 스택 & 큐
+- Week 2: Doubly & Circular Linked List
+	- [x] 차이점 비교
+  - [x] 구현
+  - [x] 문제풀이
+- Week 3: Stack & Queue
 	- [ ] 차이점 비교
 	- [ ] 배열과 연결리스트로 구현
-  - [ ] 문제풀이
-- [ ] 트리 (I)
+  - [ ] 후위표기법(postfix) 이란?
+- Tree (I)
 	- [ ] 트리 용어
 	- [ ] 이진트리 (binary tree) 구현
 	- [ ] 순회 (traversal) 알고리즘 - inorder, preorder, postorder
-  - [ ] 문제풀이
-- [ ] 트리 (II)
+- Tree (II)
   - [ ] 수식 트리(Expression Tree) 구현
-  - [ ] 문제풀이
-- [ ] 우선순위 큐 & 힙
+- Priority Queue & Heap
 	- [ ] 우선순위 큐 & 힙 이해  
 	- [ ] 우선순의 큐 & 힙 구현
-  - [ ] 문제풀이
-- [ ] 정렬
+- Sort
 	- [ ] O(n^2) 단순한 알고리즘 (버블, 선택, 삽입)
 	- [ ] O(nlgn) 복잡한 알고리즘 (merge, quick)
-  - [ ] 문제풀이
-- [ ] 탐색 (I)
+- Search Algorithm (I)
 	- [ ] 순차 탐색 (linear search)
 	- [ ] 이진 탐색 (binary search)
 	- [ ] 보간 탐색 (interpolation search)
 	- [ ] 이진탐색트리 (binary search tree) 구현
   - [ ] 문제풀이
-- [ ] 탐색 (II)
+- Search Algorithm (II)
 	- [ ] AVL 트리의 이해 & 구현
-  - [ ] 문제풀이
-- [ ] 그래프 (I)
+- Graph (I)
 	- [ ] 그래프의 종류
 	- [ ] 인접 리스트 (adjacency list) 방식으로 구현
 	- [ ] 인접 행렬 (adjacency matrix) 방식으로 구현
 	- [ ] 그래프의 탐색 (DFS & BFS)
-  - [ ] 문제풀이
-- [ ] 그래프 (II) 
+- Graph (II) 
 	- [ ] 최단 경로 구하기
 		- [ ] 다익스트라 (Dijkstra) 알고리즘 (하나의 목적지로 가는 모든 최단 경로)
 		- [ ] 플로이드 & 워셜 (Floyd–Warshall) 알고리즘 (모든 최단 경로)
-  - [ ] 문제풀이
-- [ ] 그래프 (III) 
+- Graph (III) 
 	- [ ] 최소 비용 신장 트리 (MST, Minimum Spanning Tree)
 		- [ ] Kruskal MST 알고리즘
 		- [ ] Prim MST 알고리즘
-  - [ ] 문제풀이
 
 ## 정기모임
 - 정기모임 매주 월요일 오후 9시 (JST)
