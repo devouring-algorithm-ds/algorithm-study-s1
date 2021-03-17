@@ -1,6 +1,7 @@
 
-public class DoublyLinkedList<T> {
+public class O1DoublyLinkedList<T> {
 	private Node<T> head;
+	private Node<T> tail;
 	private int length;
 	
 	boolean isEmpty() { return length <= 0; }
@@ -10,6 +11,7 @@ public class DoublyLinkedList<T> {
 		
 		if(head == null) {
 			head = newNode;
+			tail = newNode;
 		} else {
 			newNode.nextNode = head;
 			head.prevNode = newNode;
@@ -23,25 +25,24 @@ public class DoublyLinkedList<T> {
 		
 		if(head == null) {
 			head = newNode;
+			tail = newNode;
 		} else {
-			Node<T> temp = head;
-			while(temp.nextNode != null) {
-				temp = temp.nextNode;
-			}
-			temp.nextNode = newNode;
-			newNode.prevNode = temp;
+			newNode.prevNode = tail;
+			tail.nextNode = newNode;
+			tail = newNode;
 		}
 		length++;
 	}
 	
 	T removeFront() {
-		if(head == null) {
+		if(length == 0) {
 			return null;
 		}
 		
 		T data = head.data;
 		if(length == 1) {
 			head = null;
+			tail = null;
 		} else {
 			Node<T> temp = head.nextNode;
 			temp.prevNode = null;
@@ -53,7 +54,7 @@ public class DoublyLinkedList<T> {
 	}
 	
 	T removeBack() {
-		if(head == null) {
+		if(length == 0) {
 			return null;
 		}
 		
@@ -61,13 +62,12 @@ public class DoublyLinkedList<T> {
 		if(length == 1) {
 			data = head.data;
 			head = null;
+			tail = null;
 		} else {
-			Node<T> temp = head;
-			while(temp.nextNode.nextNode != null) {
-				temp = temp.nextNode;
-			}
-			data = temp.nextNode.data;
+			data = tail.data;
+			Node<T> temp = tail.prevNode;
 			temp.nextNode = null;
+			tail = temp;
 		}
 		
 		length--;
