@@ -99,5 +99,41 @@ public class Main {
 			
 			System.out.println();
 		}
+		
+		{ // CircularDoublyLinkedList
+			System.out.println(String.format(format, "CircularDoublyLinkedList"));
+			
+			CircularDoublyLinkedList<Integer> cdll = new CircularDoublyLinkedList<>();
+			
+			System.out.println("Add 5 Items, Remove All from the front.");
+			
+			cdll.insertFront(1);
+			cdll.insertFront(2);
+			cdll.insertFront(3);
+			cdll.insertBack(4);
+			cdll.insertBack(10);
+			
+			while(!cdll.isEmpty()) {
+				int data = cdll.removeFront();
+				System.out.println(data);
+			}
+			
+			System.out.println();
+			
+			System.out.println("Add 5 Items, Remove All from the back.");
+			
+			cdll.insertFront(1);
+			cdll.insertFront(2);
+			cdll.insertFront(3);
+			cdll.insertBack(4);
+			cdll.insertBack(10);
+			
+			while(!cdll.isEmpty()) {
+				int data = cdll.removeBack();
+				System.out.println(data);
+			}
+			
+			System.out.println();
+		}
 	}
 }
