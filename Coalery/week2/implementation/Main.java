@@ -37,9 +37,7 @@ public class Main {
 			}
 			
 			System.out.println();
-		}
-		
-		System.out.println();
+		} 
 		
 		{ // DoublyLinkedList with O(1) removeBack, insertBack
 			System.out.println(String.format(format, "DoublyLinkedList with O(1) removeBack, insertBack"));
@@ -71,6 +69,31 @@ public class Main {
 			
 			while(!dll.isEmpty()) {
 				int data = dll.removeBack();
+				System.out.println(data);
+			}
+			
+			System.out.println();
+		}
+		
+		{ // DoublyLinkedList with insertAt, removeAt
+			System.out.println(String.format(format, "DoublyLinkedList with O(1) removeBack, insertBack"));
+			
+			ExtendedDoublyLinkedList<Integer> edll = new ExtendedDoublyLinkedList<>();
+			
+			System.out.println("Add 5 Items, Insert 1 item, Remove 1 item, Remove All from the front.");
+			
+			edll.insertBack(1);
+			edll.insertBack(2);
+			edll.insertBack(3);
+			edll.insertBack(4);
+			edll.insertBack(5);
+			
+			edll.insertAt(2, 7);
+			
+			edll.removeAt(4);
+			
+			while(!edll.isEmpty()) {
+				int data = edll.removeFront();
 				System.out.println(data);
 			}
 			
