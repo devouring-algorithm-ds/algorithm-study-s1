@@ -9,10 +9,6 @@ class Main {
     sll.insertFront(-32452);
     sll.insertFront(5);
 
-    console.log(sll.get(0));
-    console.log(sll.get(1));
-    console.log(sll.get(2));
-
     console.log('\nRemove items from the front');
     sll.removeFront();
     console.log(sll.get(0));
@@ -46,6 +42,7 @@ class Main {
     console.log(sll.get(1));
     console.log(sll.get(2));
     console.log(sll.get(3));
+    console.log(sll);
   }
 }
 
