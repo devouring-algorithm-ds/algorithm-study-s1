@@ -1,6 +1,6 @@
 const { Node } = require('./node');
 
-class LinkedList {
+class DoublyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -12,7 +12,7 @@ class LinkedList {
     if (!node) {
       return null;
     }
-    return node.value;
+    return node.data;
   }
 
   getNode(index) {
@@ -27,32 +27,37 @@ class LinkedList {
     return node;
   }
 
-  insertFront(value) {
+  insertFront(data) {
     if (this.length === 0) {
-      this.head = new Node(value, null);
+      this.head = new Node(null, data, null);
       this.tail = this.head;
     } else {
-      const newHead = new Node(value, this.head);
+      const newHead = new Node(null, data, this.head);
       this.head = newHead;
     }
     this.length += 1;
   }
 
   removeFront() {
-    if (this.length > 0) {
-      this.head = this.head.next;
-      this.length -= 1;
-    } else {
+    if (this.length === 0) {
       console.log('There is no item.');
+    } else if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+      this.length = 0;
+    } else {
+      this.head = this.head.next;
+      this.head.prev = null;
+      this.length -= 1;
     }
   }
 
-  insertBack(value) {
+  insertBack(data) {
     if (this.length === 0) {
-      this.head = new Node(value, null);
+      this.head = new Node(null, data, null);
       this.tail = this.head;
     } else {
-      const newTail = new Node(value, null);
+      const newTail = new Node(this.tail, data, null);
       this.tail.next = newTail;
       this.tail = newTail;
     }
@@ -67,12 +72,12 @@ class LinkedList {
       this.tail = null;
       this.length = 0;
     } else {
-      const beforeTail = this.getNode(this.length - 2);
-      beforeTail.next = null;
-      this.tail = beforeTail;
+      const temp = this.tail.prev;
+      temp.next = null;
+      this.tail = temp;
       this.length -= 1;
     }
   }
 }
 
-exports.LinkedList = LinkedList;
+exports.DoublyLinkedList = DoublyLinkedList;
