@@ -17,23 +17,68 @@
     boj | leetcode 대신 해당 사이트의 이름을 사용해주세요.*
 
 ## 커리큘럼
-- Week 1: Array & Singly Linked List
-	- [x] 데이터 접근, 삽입, 삭제 시간복잡도 비교 
-	- [x] 단일 연결리스트 구현
-  - [x] 문제풀이
-- Week 2: Doubly & Circular Linked List
-	- [x] 차이점 비교
-  - [x] 구현
-  - [x] 문제풀이
-- Week 3: Stack & Queue
-  - [x] 차이점 비교
-  - [x] 배열과 연결리스트로 구현
-  - [x] 후위표기법(postfix) 이란?
-- Week 4: Review Week 1~3
-- Week 5: Tree (I)
-	- [ ] 트리 용어
-	- [ ] 이진트리 (binary tree) 구현
-	- [ ] 순회 (traversal) 알고리즘 - inorder, preorder, postorder
+
+<details>
+<summary> Week 1: Array & Singly Linked List </summary>
+	<ul>
+		<li> <a href="./week1-readme.md">README</a> </li>
+		<li> 배열과 연결리스트의 장단점 </li>
+		<li> 연결리스트의 기본 기능 </li>
+		<li> 단일 연결리스트 구현 </li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 2: Doubly & Circular Linked List </summary>
+	<ul>
+		<li> <a href="./week2-readme.md">README</a> </li>
+		<li> 이중 & 원형 연결리스트 비교 </li>
+		<li> 이중 연결리스트 구현 </li>
+		<li> 원형 연결리스트 구현 </li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 3: Stack & Queue </summary>
+	<ul>
+		<li> <a href="./week3-readme.md">README</a> </li>
+		<li> 스택(Stack)이란?</li>
+		<li> 큐(Queue)란? </li>
+		<li> 스택과 큐의 기본 기능 </li>
+		<li> 스택과 큐 구현</li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 4: Review Week 1~3 </summary>
+	<ul>
+		<li> Week 1: 복습</li>
+		<li> Week 2: 이중 & 원형 연결리스트 코드 비교 </li>
+		<li> Week 3: 스택과 큐 코드 비교 </li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 5: Tree (I) </summary>
+	<ul>
+		<li> <a href="./week5-readme.md">README</a> </li>
+		<li> 트리(Tree)란? </li>
+		<li> 트리 기본 용어 </li>
+		<li> 이진트리 (Binary Tree) 구현</li>
+		<li> 순회(traversal) 알고리즘: inorder, preorder, postorder</li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
 - Tree (II)
   - [ ] 수식 트리(Expression Tree) 구현
 - Priority Queue & Heap
