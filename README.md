@@ -26,10 +26,11 @@
   - [x] 구현
   - [x] 문제풀이
 - Week 3: Stack & Queue
-	- [ ] 차이점 비교
-	- [ ] 배열과 연결리스트로 구현
-  - [ ] 후위표기법(postfix) 이란?
-- Tree (I)
+  - [x] 차이점 비교
+  - [x] 배열과 연결리스트로 구현
+  - [x] 후위표기법(postfix) 이란?
+- Week 4: [x] Review Week 1~3
+- Week 5: Tree (I)
 	- [ ] 트리 용어
 	- [ ] 이진트리 (binary tree) 구현
 	- [ ] 순회 (traversal) 알고리즘 - inorder, preorder, postorder
