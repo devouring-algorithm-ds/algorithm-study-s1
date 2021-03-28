@@ -29,7 +29,7 @@
   - [x] 차이점 비교
   - [x] 배열과 연결리스트로 구현
   - [x] 후위표기법(postfix) 이란?
-- Week 4: [x] Review Week 1~3
+- Week 4: Review Week 1~3
 - Week 5: Tree (I)
 	- [ ] 트리 용어
 	- [ ] 이진트리 (binary tree) 구현
