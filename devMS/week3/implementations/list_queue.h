@@ -1,16 +1,21 @@
-#include "list.h"
+#include "doubly_linkedlist.h"
 
 template <class T>
 class ListQueue {
     LinkedList<T> list;
 
 public:
-    T& front() {
+    T& getFront() {
         // Return first element
        return list.front();
     }
 
-    void pop() {
+    T& getBack() {
+        // Return first element
+        return list.back();
+    }
+
+    void dequeue() {
         // Remove first element
         list.pop_front();
     }
@@ -25,7 +30,7 @@ public:
         return list.size();
     }
 
-    void push(T& val) {
+    void enqueue(T& val) {
         // Add a new item at the end of queue
         list.push_back(val);
     }
