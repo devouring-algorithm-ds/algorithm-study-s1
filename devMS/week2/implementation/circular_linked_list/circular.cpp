@@ -1,20 +1,43 @@
-﻿#include <iostream>
+﻿/*
+* 백준: 요세푸스 문제 
+* https://www.acmicpc.net/problem/1158
+*/
+
+#include <iostream>
 #include "circular_linkedlist.h"
 
 using namespace std;
 
 int main()
 {
-    // Step 1: Linked List
-    LinkedList<int> l;
+    LinkedList<int> list;
+    Node<int>* searchNode = list.front();
 
-    for (int i = 0; i < 10; ++i) {
-        l.push_back(i);
+    int total_num;
+    int kill_num;
+
+    //Input handling
+    cin >> total_num;
+    cin >> kill_num;
+
+    //Generating list from the input
+    for (int i = 1; i <= total_num; i++) {
+        list.push_back(i);
     }
+    
+    //Searching victim to kill
+    while (!list.empty())
+    {
+        kill_nth(kill_num);
+    }
+    
 
-    while (!l.empty()) {
+
+    
+
+    /*while (!list.empty()) {
         cout << l.front() << ' ';
-        l.pop_front();
+        list.pop_front();
     }
     cout << '\n';
 
@@ -33,6 +56,22 @@ int main()
         cout << double_list.back() << ' ';
         double_list.pop_back();
     }
-    double_list.pop_back();
+    double_list.pop_back();*/
 
+}
+
+void kill_nth(int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        searchNode = (searchNode->next);
+        while ((searchNode == list.head) || (searchNode == list.tail))
+        {
+            searchNode = (searchNode->next);
+        }   
+    }
+    searchNode = (searchNode->next);
+    list.erase(searchNode -> prev);
+    cout << (searchNode->val) << ",";
+    
 }
