@@ -1,5 +1,5 @@
 ## Stack & Queue
-[씹어먹는 스터디 week3: 스택(Stack) & 큐(Queue)](https://www.eubug.space/ko/devouring-study/week3/)
+[씹어먹는 스터디 week3: 스택(Stack) & 큐(Queue)](https://www.eubug.space/devouring-study/week3/)
 
 - 스택과 큐의 차이점 비교
 - 스택과 큐 구현 

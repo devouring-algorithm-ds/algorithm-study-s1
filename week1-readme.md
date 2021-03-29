@@ -1,5 +1,5 @@
 ## 배열과 연결리스트
-[씹어먹는 스터디 week1: 배열과 연결리스트](https://www.eubug.space/ko/devouring-study/week1/)
+[씹어먹는 스터디 week1: 배열과 연결리스트](https://www.eubug.space/devouring-study/week1/)
 
 - 배열과 연결 리스트의 차이점에 대해 살펴본다. 
   + 데이터 접근, 삽입, 삭제 시간복잡도 비교 

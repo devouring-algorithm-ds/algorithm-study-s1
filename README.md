@@ -17,51 +17,130 @@
     boj | leetcode 대신 해당 사이트의 이름을 사용해주세요.*
 
 ## 커리큘럼
-- Week 1: Array & Singly Linked List
-	- [x] 데이터 접근, 삽입, 삭제 시간복잡도 비교 
-	- [x] 단일 연결리스트 구현
-  - [x] 문제풀이
-- Week 2: Doubly & Circular Linked List
-	- [x] 차이점 비교
-  - [x] 구현
-  - [x] 문제풀이
-- Week 3: Stack & Queue
-	- [ ] 차이점 비교
-	- [ ] 배열과 연결리스트로 구현
-  - [ ] 후위표기법(postfix) 이란?
-- Tree (I)
-	- [ ] 트리 용어
-	- [ ] 이진트리 (binary tree) 구현
-	- [ ] 순회 (traversal) 알고리즘 - inorder, preorder, postorder
-- Tree (II)
-  - [ ] 수식 트리(Expression Tree) 구현
-- Priority Queue & Heap
-	- [ ] 우선순위 큐 & 힙 이해  
-	- [ ] 우선순의 큐 & 힙 구현
-- Sort
-	- [ ] O(n^2) 단순한 알고리즘 (버블, 선택, 삽입)
-	- [ ] O(nlgn) 복잡한 알고리즘 (merge, quick)
-- Search Algorithm (I)
-	- [ ] 순차 탐색 (linear search)
-	- [ ] 이진 탐색 (binary search)
-	- [ ] 보간 탐색 (interpolation search)
-	- [ ] 이진탐색트리 (binary search tree) 구현
-  - [ ] 문제풀이
-- Search Algorithm (II)
-	- [ ] AVL 트리의 이해 & 구현
-- Graph (I)
-	- [ ] 그래프의 종류
-	- [ ] 인접 리스트 (adjacency list) 방식으로 구현
-	- [ ] 인접 행렬 (adjacency matrix) 방식으로 구현
-	- [ ] 그래프의 탐색 (DFS & BFS)
-- Graph (II) 
-	- [ ] 최단 경로 구하기
-		- [ ] 다익스트라 (Dijkstra) 알고리즘 (하나의 목적지로 가는 모든 최단 경로)
-		- [ ] 플로이드 & 워셜 (Floyd–Warshall) 알고리즘 (모든 최단 경로)
-- Graph (III) 
-	- [ ] 최소 비용 신장 트리 (MST, Minimum Spanning Tree)
-		- [ ] Kruskal MST 알고리즘
-		- [ ] Prim MST 알고리즘
+
+<details>
+<summary> Week 1: Array & Singly Linked List </summary>
+	<ul>
+		<li> <a href="./week1-readme.md">README</a> </li>
+		<li> 배열과 연결리스트의 장단점 </li>
+		<li> 연결리스트의 기본 기능 </li>
+		<li> 단일 연결리스트 구현 </li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 2: Doubly & Circular Linked List </summary>
+	<ul>
+		<li> <a href="./week2-readme.md">README</a> </li>
+		<li> 이중 & 원형 연결리스트 비교 </li>
+		<li> 이중 연결리스트 구현 </li>
+		<li> 원형 연결리스트 구현 </li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 3: Stack & Queue </summary>
+	<ul>
+		<li> <a href="./week3-readme.md">README</a> </li>
+		<li> 스택(Stack)이란?</li>
+		<li> 큐(Queue)란? </li>
+		<li> 스택과 큐의 기본 기능 </li>
+		<li> 스택과 큐 구현</li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 4: Review Week 1~3 </summary>
+	<ul>
+		<li> Week 1: 복습</li>
+		<li> Week 2: 이중 & 원형 연결리스트 코드 비교 </li>
+		<li> Week 3: 스택과 큐 코드 비교 </li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+<summary> Week 5: Tree (I) </summary>
+	<ul>
+		<li> <a href="./week5-readme.md">README</a> </li>
+		<li> 트리(Tree)란? </li>
+		<li> 트리 기본 용어 </li>
+		<li> 이진트리 (Binary Tree) 구현</li>
+		<li> 순회(traversal) 알고리즘: inorder, preorder, postorder</li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
+	<summary> TBD </summary>
+	<ul>
+		<li> 
+			Tree (II) 
+			<ul>
+				<li> 수식 트리(Expression Tree) 구현 </li>
+			</ul>
+		</li>
+		<li>  
+			Priority Queue & Heap 
+			<ul>
+				<li> 우선순위 큐 & 힙 이해 </li>
+				<li> 우선순위 큐 & 힙 구현 </li>
+			</ul>
+		</li>
+		<li> 
+			Sort 
+			<ul>
+				<li> O(n^2) 단순한 알고리즘 (버블, 선택, 삽입) </li>
+				<li> O(nlgn) 복잡한 알고리즘 (merge, quick) </li>
+			</ul>
+		</li>
+		<li> 
+			Search Algorithm (I)
+			<ul>
+				<li> 순차 탐색 (linear search) </li>
+				<li> 이진 탐색 (binary search) </li>
+				<li> 보간 탐색 (interpolation search)  </li>
+				<li> 이진탐색트리 (binary search tree) 구현 </li>
+			</ul>
+		</li>
+		<li> 
+			Search Algorithm (II)
+			<ul>
+				<li> AVL 트리의 이해 & 구현 </li>
+			</ul>
+		</li>
+		<li> 
+			Graph (I): 그래프의 종류
+			<ul>
+				<li> 인접 리스트 (adjacency list) 방식으로 구현 </li>
+				<li> 인접 행렬 (adjacency matrix) 방식으로 구현 </li>
+				<li> 그래프의 탐색 (DFS & BFS) </li>
+			</ul>
+		</li>
+		<li> 
+			Graph (II): 최단 경로 구하기
+			<ul>
+				<li>  다익스트라 (Dijkstra) 알고리즘 (하나의 목적지로 가는 모든 최단 경로) </li>
+				<li> 플로이드 & 워셜 (Floyd–Warshall) 알고리즘 (모든 최단 경로) </li>
+			</ul>
+		</li>
+		<li> 
+			Graph (III): 최소 비용 신장 트리
+			<ul>
+				<li> Kruskal MST 알고리즘 </li>
+				<li> Prim MST 알고리즘 </li>
+			</ul>
+		</li>
+	</ul>
+</details>
 
 ## 정기모임
 - 정기모임 매주 월요일 오후 9시 (JST)

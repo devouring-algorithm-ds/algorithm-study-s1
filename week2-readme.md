@@ -1,5 +1,5 @@
 ## 이중 & 원형 연결리스트
-[씹어먹는 스터디 week2: 이중 & 원형 연결리스트](https://www.eubug.space/ko/devouring-study/week2/)
+[씹어먹는 스터디 week2: 이중 & 원형 연결리스트](https://www.eubug.space/devouring-study/week2/)
 
 - 이중 연결리스트와 원형 연결리스트 비교.
 - 이중 연결리스트의 의사코드 살펴보기.
