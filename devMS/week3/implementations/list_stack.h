@@ -1,11 +1,11 @@
-#include "list.h"
+#include "doubly_linkedlist.h"
 
 template <class T>
 class ListStack {
     LinkedList<T> list;
 
 public:
-    T& top() {
+    T& peek() {
         // Return top element
         return list.back();
     }
@@ -15,7 +15,7 @@ public:
         list.pop_back();
     }
 
-    bool empty() {
+    bool isEmpty() {
         // Return true if empty, false otherwise
       return list.empty();
     }
