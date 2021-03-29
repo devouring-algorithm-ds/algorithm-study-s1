@@ -1,5 +1,5 @@
-#ifndef DOUBLY_LINKEDLIST_H
-#define DOUBLY_LINKEDLIST_H
+#ifndef CIRCULAR_LINKEDLIST_H
+#define CIRCULAR_LINKEDLIST_H
 
 template <typename T>
 class Node {
