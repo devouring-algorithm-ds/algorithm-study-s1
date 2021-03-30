@@ -18,18 +18,21 @@ public:
 
 template <class T>
 class LinkedList {
-    // Dummy nodes
-    Node<T>* head;
-    Node<T>* tail;
 
     // member variables
     int sizeVal;
     Node<T>* newNode;
-    Node<T>* searchNode;
     Node<T>* frontNode;
     Node<T>* backNode;
 
+
 public:
+
+    // Dummy nodes
+    Node<T>* head;
+    Node<T>* tail;
+
+
     LinkedList() {
         // Constructor.
         head = new Node<T>;
@@ -44,7 +47,6 @@ public:
         sizeVal = 0;
 
         newNode = nullptr;
-        searchNode = nullptr;
         frontNode = nullptr;
         backNode = nullptr;
     }
@@ -146,18 +148,7 @@ public:
         }
     }
 
-    //For Debug
-    Node<T>* find(T val) {
-        // Return the pointer of first node with the data val.
-        searchNode = head;
-        for (int i = 0; i < sizeVal; i++)
-        {
-            searchNode = (searchNode->next);
-            if ((searchNode->data) == val)
-                return searchNode;
-        }
-        return nullptr;
-    }
+    
 
     
 };
