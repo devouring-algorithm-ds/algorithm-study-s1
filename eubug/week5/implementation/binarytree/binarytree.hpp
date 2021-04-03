@@ -85,8 +85,8 @@ char BinaryTree::deleteNode() {
     return '\0';
   }
 
-  Node *lastLevelLevelOrder = nullptr; 
-  Node *parentOfLastNode = nullptr;
+  Node *leaftNode = nullptr; 
+  Node *parent = nullptr;
   queue<Node *> q;
   q.push(root);
 
@@ -97,28 +97,28 @@ char BinaryTree::deleteNode() {
     if( temp->left != nullptr )  {
       q.push( temp->left );
       if ( temp->left->left == nullptr && temp->left->right == nullptr ) {
-        lastLevelLevelOrder = temp->left;
-        parentOfLastNode = temp;
+        leaftNode = temp->left;
+        parent = temp;
       }
     } 
 
     if( temp->right != nullptr ) {
       q.push( temp->right );
       if( temp->right->left == nullptr && temp->right->right == nullptr ) {
-        lastLevelLevelOrder = temp->right; 
-        parentOfLastNode = temp;
+        leaftNode = temp->right; 
+        parent = temp;
       }
     }
   }
 
   char c;
-  if ( lastLevelLevelOrder != nullptr && parentOfLastNode != nullptr )  {
-    if (parentOfLastNode->right != nullptr) {
-      c = parentOfLastNode->right->data;
-      parentOfLastNode->right = nullptr;
+  if ( leaftNode != nullptr && parent != nullptr )  {
+    if (parent->right != nullptr) {
+      c = parent->right->data;
+      parent->right = nullptr;
     } else {
-      c = parentOfLastNode->left->data;
-      parentOfLastNode->left = nullptr;
+      c = parent->left->data;
+      parent->left = nullptr;
     }
   } else {
     c = '\0';
