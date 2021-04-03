@@ -24,5 +24,12 @@ int main() {
   cout << "Postorder: ";
   bt.postorder(0);
   cout << endl;
+
+  cout << "Delete last leaf node" << endl;
+  cout << "Deleting the last leaf node: " << bt.deleteNode() << endl;
+  cout << "Deleting the last leaf node: " << bt.deleteNode() << endl;
+  cout << "Deleting the last leaf node: " << bt.deleteNode() << endl;
+  cout << "Deleting the last leaf node: " << bt.deleteNode() << endl;
+  cout << "Deleting the last leaf node: " << bt.deleteNode() << endl;
   return 0;
 }
