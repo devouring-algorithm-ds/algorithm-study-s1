@@ -2,6 +2,7 @@
 #include <queue>
 
 using std::cout;
+using std::cerr;
 using std::cin;
 using std::endl;
 using std::queue;
@@ -17,6 +18,8 @@ class BinaryTree {
     ~BinaryTree();
 
     void insertNode(char);
+    char deleteNode();
+
     void inorder(bool);
     void preorder(bool);
     void postorder(bool);
@@ -74,6 +77,54 @@ void BinaryTree::insertNode(char data) {
       }
     }
   }
+}
+
+char BinaryTree::deleteNode() {
+  if ( root == nullptr ) {
+    cerr << "Empty tree" << endl;
+    return '\0';
+  }
+
+  Node *lastLevelLevelOrder = nullptr; 
+  Node *parentOfLastNode = nullptr;
+  queue<Node *> q;
+  q.push(root);
+
+  while( !q.empty() ) {
+    Node *temp = q.front();
+    q.pop();
+
+    if( temp->left != nullptr )  {
+      q.push( temp->left );
+      if ( temp->left->left == nullptr && temp->left->right == nullptr ) {
+        lastLevelLevelOrder = temp->left;
+        parentOfLastNode = temp;
+      }
+    } 
+
+    if( temp->right != nullptr ) {
+      q.push( temp->right );
+      if( temp->right->left == nullptr && temp->right->right == nullptr ) {
+        lastLevelLevelOrder = temp->right; 
+        parentOfLastNode = temp;
+      }
+    }
+  }
+
+  char c;
+  if ( lastLevelLevelOrder != nullptr && parentOfLastNode != nullptr )  {
+    if (parentOfLastNode->right != nullptr) {
+      c = parentOfLastNode->right->data;
+      parentOfLastNode->right = nullptr;
+    } else {
+      c = parentOfLastNode->left->data;
+      parentOfLastNode->left = nullptr;
+    }
+  } else {
+    c = '\0';
+    cerr << "Empty tree" << endl;
+  }
+  return c;
 }
 
 void BinaryTree::inorder(bool printCount) {
