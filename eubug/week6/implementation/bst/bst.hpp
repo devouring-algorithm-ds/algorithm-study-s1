@@ -18,9 +18,11 @@ class BST {
     ~BST();
 
     void insert(int data);
+    bool search(int data);
     void remove(int data);
     Node* removeNode(Node *, int);
     Node* minValueNode(Node *);
+
     void deleteTree(Node *);
 
     void inorder();
@@ -64,6 +66,24 @@ void BST::insert(int data) {
       temp = temp->left;
     }
   }
+}
+
+bool BST::search(int data) {
+  if( root->data == data ) return true;
+  
+  Node *temp = root;
+  while(true) {
+    if( temp==nullptr ) break;
+    if( data < temp->data ) {
+      temp = temp->left;
+    } else if( data > temp->data ) {
+      temp = temp->right;
+    } else {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 void BST::remove(int data) {
