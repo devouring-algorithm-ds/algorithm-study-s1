@@ -18,8 +18,9 @@ class BST {
     ~BST();
 
     void insert(int data);
-    void insertLeft(Node *node, int data);
-    void insertRight(Node *node, int data);
+    void remove(int data);
+    Node* removeNode(Node *, int);
+    Node* minValueNode(Node *);
     void deleteTree(Node *);
 
     void inorder();
@@ -63,6 +64,47 @@ void BST::insert(int data) {
       temp = temp->left;
     }
   }
+}
+
+void BST::remove(int data) {
+  removeNode(root, data);
+}
+
+Node* BST::removeNode(Node *node, int data) {
+  if( node == nullptr) return node;
+
+  if( data < node->data ) {
+    node->left = removeNode(node->left, data);
+  } else if( data > node->data ) {
+    node->right = removeNode(node->right, data);
+  } else {
+    // node with only one child or no child 
+    if( node->left == nullptr ) {
+      Node *temp = node->right; 
+      delete node;
+      return temp;
+    } else if ( node->right == nullptr ) {
+      Node *temp = node->left;
+      delete node;
+      return temp;
+    }
+
+    // find the smallest node from the right child
+    Node *temp = minValueNode(node->right);
+    node->data = temp->data;
+    node->right = removeNode(node->right, temp->data);
+  }
+
+  return node;
+}
+
+Node* BST::minValueNode(Node *node) {
+  Node *curr = node;
+  while( curr && curr->left != nullptr ) {
+    curr = curr->left;
+  }
+
+  return curr;
 }
 
 void BST::inorder() {
