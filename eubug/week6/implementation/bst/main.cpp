@@ -7,16 +7,20 @@ using namespace std;
 int main() {
   BST bst;
 
-  bst.insert(8);
-  bst.insert(3);
-  bst.insert(10);
-  bst.insert(1);
-  bst.insert(6);
-  bst.insert(14);
-  bst.insert(4);
-  bst.insert(7);
-  bst.insert(13);
+  bst.insert(50);
+  bst.insert(30);
+  bst.insert(70);
+  bst.insert(20);
+  bst.insert(40);
+  bst.insert(60);
+  bst.insert(80);
+  bst.inorder();
 
+  bst.remove(20);
+  bst.inorder();
+  bst.remove(30);
+  bst.inorder();
+  bst.remove(50);
   bst.inorder();
 
   return 0;
