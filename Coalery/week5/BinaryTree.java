@@ -36,6 +36,48 @@ public class BinaryTree<T> {
 	
 	public void postorder() { postorderHelper(root); }
 	
+	public T deleteNode() {
+		if(root == null) return null;
+		
+		TreeNode<T> lastNode = null;
+		T result = null;
+		
+		Queue<TreeNode<T>> Q = new Queue<>();
+		Q.enqueue(root);
+		
+		while(!Q.isEmpty()) {
+			lastNode = Q.dequeue();
+			result = lastNode.data;
+			
+			if(lastNode.left != null) Q.enqueue(lastNode.left);
+			if(lastNode.right != null) Q.enqueue(lastNode.right);
+		}
+		
+		TreeNode<T> parent = searchParent(root, lastNode);
+		
+		if(lastNode.equals(parent.left))
+			parent.left = null;
+		else if(lastNode.equals(parent.right))
+			parent.right = null;
+		
+		return result;
+	}
+	
+	private TreeNode<T> searchParent(TreeNode<T> root, TreeNode<T> target) {
+		if(root == null) return null;
+		if(target == null) return null;
+		
+		if(root.left != null && target.equals(root.left)) return root;
+		if(root.right != null && target.equals(root.right)) return root;
+		
+		TreeNode<T> result = null;
+		
+		result = searchParent(root.left, target);
+		result = searchParent(root.right, target);
+		
+		return result;
+	}
+	
 	private void inorderHelper(TreeNode<T> root) {
 		if(root == null) return;
 		inorderHelper(root.left);
