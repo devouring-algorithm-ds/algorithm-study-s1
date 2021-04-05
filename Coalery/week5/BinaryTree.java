@@ -29,4 +29,31 @@ public class BinaryTree<T> {
 			}
 		}
 	}
+	
+	public void inorder() { inorderHelper(root); }
+	
+	public void preorder() { preorderHelper(root); }
+	
+	public void postorder() { postorderHelper(root); }
+	
+	private void inorderHelper(TreeNode<T> root) {
+		if(root == null) return;
+		inorderHelper(root.left);
+		System.out.print(root.data + " ");
+		inorderHelper(root.right);
+	}
+	
+	private void preorderHelper(TreeNode<T> root) {
+		if(root == null) return;
+		System.out.print(root.data + " ");
+		preorderHelper(root.left);
+		preorderHelper(root.right);
+	}
+	
+	private void postorderHelper(TreeNode<T> root) {
+		if(root == null) return;
+		postorderHelper(root.left);
+		postorderHelper(root.right);
+		System.out.print(root.data + " ");
+	}
 }
