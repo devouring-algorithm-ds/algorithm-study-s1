@@ -18,5 +18,25 @@ public class Main {
 		System.out.println("postorder");
 		btree.postorder();
 		System.out.println();
+		
+		btree.deleteNode();
+		
+		System.out.println();
+		System.out.println("----- deleteNode() -----");
+		System.out.println();
+		
+		System.out.println("inorder");
+		btree.inorder();
+		System.out.println();
+		
+		System.out.println();
+		System.out.println("preorder");
+		btree.preorder();
+		System.out.println();
+		
+		System.out.println();
+		System.out.println("postorder");
+		btree.postorder();
+		System.out.println();
 	}
 }
