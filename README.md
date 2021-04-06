@@ -67,7 +67,7 @@
 </details>
 
 <details>
-<summary> Week 5: Tree (I) </summary>
+<summary> Week 5: Binary Tree & Traversals </summary>
 	<ul>
 		<li> <a href="./week5-readme.md">README</a> </li>
 		<li> 트리(Tree)란? </li>
@@ -80,14 +80,20 @@
 </details>
 
 <details>
+<summary> Week 6: Binary Search Tree  </summary>
+	<ul>
+		<li> <a href="./week6-readme.md">README</a> </li>
+		<li> 이진탐색 트리(Binary Search Tree)란? </li>
+		<li> BST에서의 삽입, 삭제, 탐색 </li>
+		<li> 레드블랙 트리(Red Black Tree)란? </li>
+		<li> 풀어볼 문제들</li>
+	</ul>
+</summary>
+</details>
+
+<details>
 	<summary> TBD </summary>
 	<ul>
-		<li> 
-			Tree (II) 
-			<ul>
-				<li> 수식 트리(Expression Tree) 구현 </li>
-			</ul>
-		</li>
 		<li>  
 			Priority Queue & Heap 
 			<ul>
